@@ -1,6 +1,7 @@
 const {
   app,
   BrowserWindow,
+  dialog,
   Tray,
   Menu,
   session
@@ -108,7 +109,13 @@ function createTray() {
     {
       label: 'Preferences',
       click:  function() {
-        shell.openItem(configInstance.getConfigFilename());
+        shell.openPath(configInstance.getConfigFilename())
+          .catch(e => {
+            dialog.showMessageBox({
+              title: "Couldn't open preferences",
+              message: `Error: ${e}`
+            });
+          });
       },
       id: 'preferences'
     },

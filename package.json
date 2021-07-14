@@ -5,6 +5,7 @@
     "homepage": "https://github.com/krydos/todoist-linux",
     "build": {
         "appId": "com.krydos.todoist",
+        "electronVersion": "13.1.6",
         "directories": {
             "app": "src"
         },
@@ -40,6 +41,6 @@
         }
     },
     "devDependencies": {
-        "electron-builder": "^20.44.4"
+        "electron-builder": "^22.11.7"
     }
 }
