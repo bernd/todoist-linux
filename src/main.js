@@ -238,6 +238,12 @@ function createWindow () {
       label: 'Help',
       submenu: [
         {
+          label: `Electron version: ${process.versions.electron}`,
+        },
+        {
+          label: `Chrome version: ${process.versions.chrome}`,
+        },
+        {
           label: 'GitHub',
           click:  function() {
             shell.openExternal('https://github.com/KryDos/todoist-linux');
